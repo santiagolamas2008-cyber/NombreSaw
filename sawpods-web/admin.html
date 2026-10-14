@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - SawPods</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="login-screen" class="login-screen">
+        <div class="login-box">
+            <div class="logo">
+                <span class="logo-icon">🎧</span>
+                <span class="logo-text">SawPods Admin</span>
+            </div>
+            <h2>Panel de Administración</h2>
+            <p>Ingresa tu contraseña para continuar</p>
+            <input type="password" id="admin-password" placeholder="Contraseña" onkeypress="if(event.key==='Enter') loginAdmin()">
+            <button onclick="loginAdmin()">Ingresar →</button>
+        </div>
+    </div>
+
+    <div id="admin-panel" class="admin-panel" style="display: none;">
+        
+        <header class="admin-header">
+            <div class="logo">
+                <span class="logo-icon">🎧</span>
+                <span class="logo-text">SawPods · Panel de Pedidos</span>
+            </div>
+            <div class="admin-actions">
+                <a href="index.html" class="btn-back">← Ver sitio</a>
+                <button class="btn-logout" onclick="logoutAdmin()">Cerrar sesión</button>
+            </div>
+        </header>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-icon">📦</span>
+                <div>
+                    <p>Total de Pedidos</p>
+                    <h3 id="stat-total">0</h3>
+                </div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">⏳</span>
+                <div>
+                    <p>Pendientes</p>
+                    <h3 id="stat-pendientes">0</h3>
+                </div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">🚚</span>
+                <div>
+                    <p>Enviados</p>
+                    <h3 id="stat-enviados">0</h3>
+                </div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">💰</span>
+                <div>
+                    <p>Ingresos Estimados</p>
+                    <h3 id="stat-ingresos">0 Bs</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="filters-section">
+            <div class="filters">
+                <button class="filter-btn active" onclick="filtrarPedidos('Todos', this)">Todos</button>
+                <button class="filter-btn" onclick="filtrarPedidos('Pendiente', this)">⏳ Pendientes</button>
+                <button class="filter-btn" onclick="filtrarPedidos('Confirmado', this)">✅ Confirmados</button>
+                <button class="filter-btn" onclick="filtrarPedidos('Enviado', this)">🚚 Enviados</button>
+                <button class="filter-btn" onclick="filtrarPedidos('Entregado', this)">🎉 Entregados</button>
+                <button class="filter-btn" onclick="filtrarPedidos('Cancelado', this)">❌ Cancelados</button>
+            </div>
+            <button class="btn-danger" onclick="borrarTodosLosPedidos()">🗑️ Borrar todos</button>
+        </section>
+
+        <section class="table-section">
+            <table class="pedidos-table">
+                <thead>
+                    <tr>
+                        <th>ID Pedido</th>
+                        <th>Fecha</th>
+                        <th>Cliente</th>
+                        <th>Teléfono</th>
+                        <th>Producto</th>
+                        <th>Pago</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-pedidos"></tbody>
+            </table>
+            <div id="sin-pedidos" class="sin-pedidos" style="display: none;">
+                <span>📭</span>
+                <p>No hay pedidos registrados todavía.</p>
+            </div>
+        </section>
+    </div>
+
+    <div id="modal-detalle" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-modal" onclick="cerrarModal()">&times;</span>
+            <h2 id="modal-titulo">Detalle del Pedido</h2>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

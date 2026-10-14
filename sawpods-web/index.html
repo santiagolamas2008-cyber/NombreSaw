@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SawPods - AirPods y Cascos Originales en Cochabamba</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-icon">🎧</span>
+            <span class="logo-text">SawPods</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#reservar">Reservar</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="btn-admin" onclick="accederAdmin()" title="Panel de administración">
+                🔒 Admin
+            </button>
+            <button class="btn-primary nav-btn" onclick="scrollToReserva()">Reservar ahora →</button>
+        </div>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <div class="badge">
+                <span class="dot"></span> STOCK DISPONIBLE · COCHABAMBA
+            </div>
+            <h1>Audio <span class="gradient-text">original</span> <br> al mejor precio</h1>
+            <p class="hero-subtitle">AirPods 2ª y 3ª generación + Cascos P9 inalámbricos. Probados, verificados y con envío coordinado directo a tu puerta en Cochabamba.</p>
+            
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToCatalogo()">Ver catálogo</button>
+                <button class="btn-secondary" onclick="scrollToReserva()">Reservar →</button>
+            </div>
+
+            <div class="hero-features">
+                <span>✅ Garantía 30 días</span>
+                <span>🚚 Entrega coordinada</span>
+                <span>🔒 Pago seguro</span>
+                <span>📱 100% original</span>
+            </div>
+        </div>
+        
+        <div class="hero-image-container">
+            <div class="circle-image">
+                <img src="https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=800" alt="AirPods" class="hero-img">
+            </div>
+            <div class="price-tag">
+                <span>desde</span>
+                <strong>75 Bs</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CATÁLOGO ================= -->
+    <section id="catalogo" class="catalog-section">
+        <div class="section-header">
+            <p class="section-tag">CATÁLOGO</p>
+            <h2>Elige tu modelo ideal</h2>
+            <p class="section-subtitle">Todos nuestros productos pasan por una revisión exhaustiva antes de ser enviados.</p>
+        </div>
+
+        <div class="catalog-grid">
+            
+            <!-- TARJETA AirPods 2 -->
+            <div class="product-card">
+                <div class="product-image-wrapper" style="background: linear-gradient(135deg, #1a3b5c, #0f2338);">
+                    <span class="badge-tag blue">MÁS VENDIDO</span>
+                    <img src="https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=500" alt="AirPods 2" class="product-img">
+                </div>
+                <div class="product-info">
+                    <p class="gen-tag">2ª GENERACIÓN</p>
+                    <h3>AirPods 2</h3>
+                    <p class="desc">El clásico que nunca falla.</p>
+                    <div class="price">200 <span>Bs</span></div>
+                    <p class="condition">Excelente estado · Sin rayones</p>
+                    
+                    <div class="specs">
+                        <div class="spec-item">
+                            <span class="spec-title">🔋 Batería</span>
+                            <span class="spec-value">5 h de audio</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-title">📦 Estuche</span>
+                            <span class="spec-value">24 h totales</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-title">⚡ Carga rápida</span>
+                            <span class="spec-value">15 min = 3 h</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-title">📶 Bluetooth</span>
+                            <span class="spec-value">v5.0</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-reservar-product" onclick="verDetalleProducto('AirPods 2')">
+                        Ver detalles →
+                    </button>
+                </div>
+            </div>
+
+            <!-- TARJETA AirPods 3 -->
+            <div class="product-card">
+                <div class="product-image-wrapper" style="background: linear-gradient(135deg, #2e1065, #1a0a3a);">
+                    <span class="badge-tag purple">NUEVO MODELO</span>
+                    <img src="https://images.unsplash.com/photo-1606400082777-ef05f3c5cde2?w=500" alt="AirPods 3" class="product-img">
+                </div>
+                <div class="product-info">
+                    <p class="gen-tag">3ª GENERACIÓN</p>
+                    <h3>AirPods 3</h3>
+                    <p class="desc">Audio espacial. Sonido sin límites.</p>
+                    <div class="price">250 <span>Bs</span></div>
+                    <p class="condition">Como nuevo · Caja original</p>
+                    
+                    <div class="specs">
+                        <div class="spec-item">
+                            <span class="spec-title">🔋 Batería</span>
+                            <span class="spec-value">6 h de audio</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-title">📦 Estuche</span>
+                            <span class="spec-value">30 h totales</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-title">⚡ Carga rápida</span>
+                            <span class="spec-value">5 min = 1 h</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-title">💧 Resistencia</span>
+                            <span class="spec-value">IPX4</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-reservar-product purple-btn" onclick="verDetalleProducto('AirPods 3')">
+                        Ver detalles →
+                    </button>
+                </div>
+            </div>
+
+            <!-- TARJETA P9 -->
+            <div class="product-card">
+                <div class="product-image-wrapper" style="background: linear-gradient(135deg, #7f1d1d, #450a0a);">
+                    <span class="badge-tag red">OFERTA</span>
+                    <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=500" alt="Cascos P9" class="product-img">
+                </div>
+                <div class="product-info">
+                    <p class="gen-tag red-tag">INALÁMBRICOS</p>
+                    <h3>Cascos P9</h3>
+                    <p class="desc">Sonido envolvente con cancelación.</p>
+                    <div class="price">75 <span>Bs</span></div>
+                    <p class="condition">Nuevos · Caja sellada</p>
+                    
+                    <div class="specs">
+                        <div class="spec-item">
+                            <span class="spec-title">🔋 Batería</span>
+                            <span class="spec-value">Hasta 20 h</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-title">🎵 Modo</span>
+                            <span class="spec-value">HiFi Estéreo</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-title">📶 Bluetooth</span>
+                            <span class="spec-value">v5.3</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-title">🎤 Micrófono</span>
+                            <span class="spec-value">Incorporado</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-reservar-product red-btn" onclick="verDetalleProducto('Cascos P9')">
+                        Ver detalles →
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= BENEFICIOS ================= -->
+    <section class="features-section">
+        <div class="section-header">
+            <p class="section-tag">¿POR QUÉ ELEGIRNOS?</p>
+            <h2>Envío coordinado y seguro</h2>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📦</div>
+                <h3>Envío seguro y coordinado</h3>
+                <p>Coordinamos la entrega contigo paso a paso, empaque protegido y seguimiento en tiempo real.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3>Entrega el mismo día</h3>
+                <p>Si reservas antes de las 14:00, despachamos ese mismo día dentro de Cochabamba.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✅</div>
+                <h3>Garantía 30 días</h3>
+                <p>Si algo falla o no funciona como se describe, lo cambiamos sin preguntas ni costo adicional.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Probados y listos</h3>
+                <p>Cada producto pasa revisión completa: batería, Bluetooth, micrófono y emparejamiento.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ZONA DE RESERVA ================= -->
+    <section id="reservar" class="reserve-section">
+        
+        <div class="reserve-info">
+            <p class="section-tag">ZONA DE RESERVA</p>
+            <h2>Reserva tu par <br> <span class="text-muted">sin compromiso</span></h2>
+            <p class="reserve-desc">Completa el formulario y te contactamos en menos de 2 horas por WhatsApp para coordinar el envío y confirmar disponibilidad.</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h4>Rellena el formulario</h4>
+                        <p>Nombre, teléfono, modelo y método de pago.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h4>Coordinamos el envío</h4>
+                        <p>Te escribimos por WhatsApp para acordar dirección, horario y detalles.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h4>Pago y entrega</h4>
+                        <p>Pagas al recibir (efectivo) o por QR antes del despacho.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-box">
+                <span class="icon">💬</span>
+                <div>
+                    <strong>¿Preguntas antes de reservar?</strong>
+                    <p>Escríbenos: +591 76466625</p>
+                </div>
+            </div>
+
+            <div class="contact-box social-box" style="margin-top: 15px;">
+                <span class="icon">📲</span>
+                <div>
+                    <strong>Síguenos en redes</strong>
+                    <p>🎵 TikTok: @saw_pods · 📷 Instagram: @saw_pods</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="reserve-form-container">
+            <div class="form-header">
+                <h3>Datos de tu reserva</h3>
+                <p>Todos los campos marcados con <span class="required">*</span> son obligatorios</p>
+            </div>
+
+            <form class="reserve-form" id="form-reserva" onsubmit="enviarReserva(event)">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>👤 NOMBRE COMPLETO <span class="required">*</span></label>
+                        <input type="text" id="nombre" placeholder="Ej. Andrea Mamani Quispe" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>📱 TELÉFONO (BOLIVIA) <span class="required">*</span></label>
+                        <div class="phone-input">
+                            <span class="country-code">🇧🇴 +591</span>
+                            <input type="tel" id="telefono" placeholder="7x xxx xxxx" required>
+                        </div>
+                        <small>8 dígitos, comenzando con 6 o 7</small>
+                    </div>
+                </div>
+
+                <div class="form-row two-cols">
+                    <div class="form-group">
+                        <label>📦 CANTIDAD <span class="required">*</span></label>
+                        <select id="cantidad" onchange="toggleCantidadExtra()">
+                            <option value="1 par">1 par</option>
+                            <option value="2 pares">2 pares</option>
+                            <option value="3 pares">3 pares</option>
+                            <option value="Más de 3">Más de 3</option>
+                        </select>
+                        <input type="number" id="cantidad-extra" placeholder="¿Cuántos?" min="4" style="display: none;">
+                    </div>
+
+                    <div class="form-group">
+                        <label>🎧 MODELO <span class="required">*</span></label>
+                        <select id="modelo-select" required>
+                            <option value="" disabled selected>Elegir...</option>
+                            <option value="AirPods 2">AirPods 2</option>
+                            <option value="AirPods 3">AirPods 3</option>
+                            <option value="Cascos P9">Cascos P9</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>💳 MÉTODO DE PAGO <span class="required">*</span></label>
+                    <div class="payment-methods">
+                        <div class="payment-option active" onclick="selectPayment(this, 'efectivo')">
+                            <span class="pay-icon">💵</span>
+                            <div class="pay-info">
+                                <strong>Efectivo</strong>
+                                <p>Pago al recibir</p>
+                            </div>
+                            <span class="check-icon">✓</span>
+                        </div>
+                        <div class="payment-option" onclick="selectPayment(this, 'qr')">
+                            <span class="pay-icon">📱</span>
+                            <div class="pay-info">
+                                <strong>Código QR</strong>
+                                <p>Transferencia</p>
+                            </div>
+                            <span class="check-icon">✓</span>
+                        </div>
+                    </div>
+                    
+                    <div id="qr-container" class="qr-container">
+                        <p class="qr-title">Escanea este código para pagar</p>
+                        <img src="https://via.placeholder.com/180" alt="Código QR" class="qr-img">
+                        <p class="qr-subtitle">Sube tu comprobante aquí:</p>
+                        <input type="file" class="qr-file">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>📝 NOTAS ADICIONALES</label>
+                    <textarea id="notas" placeholder="Dirección de entrega, horario disponible o cualquier consulta..." rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <span>Confirmar reserva</span>
+                    <span class="arrow">→</span>
+                </button>
+
+                <p class="form-footer">🔒 Tus datos están protegidos. Te contactaremos por WhatsApp al +591 76466625.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer id="contacto" class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-icon">🎧</span>
+                    <span class="logo-text">SawPods</span>
+                </div>
+                <p>Audio original al mejor precio en Cochabamba, Bolivia.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces</h4>
+                <a href="#inicio">Inicio</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#reservar">Reservar</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p>📱 <a href="https://wa.me/59176466625" target="_blank" style="color: inherit;">+591 76466625</a></p>
+                <p>📍 Cochabamba, Bolivia</p>
+                <p>🎵 <a href="https://www.tiktok.com/@saw_pods" target="_blank" style="color: var(--primary-blue);">TikTok: @saw_pods</a></p>
+                <p>📷 <a href="https://www.instagram.com/saw_pods" target="_blank" style="color: var(--primary-blue);">Instagram: @saw_pods</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 SawPods Bolivia. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

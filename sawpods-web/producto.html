@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto - SawPods</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-icon">🎧</span>
+            <span class="logo-text">SawPods</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="index.html#catalogo">Catálogo</a>
+            <a href="index.html#reservar">Reservar</a>
+            <a href="index.html#contacto">Contacto</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="btn-admin" onclick="accederAdmin()" title="Panel de administración">
+                🔒 Admin
+            </button>
+            <button class="btn-primary nav-btn" onclick="window.location.href='index.html#reservar'">Reservar ahora →</button>
+        </div>
+    </header>
+
+    <section class="product-detail-section">
+        <div class="product-gallery">
+            <div class="main-image" id="main-image-container">
+                <img src="https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=800" alt="Producto" class="detail-main-img" id="detail-main-img">
+            </div>
+            <div class="thumbnail-grid">
+                <div class="thumb active" onclick="cambiarImagen(this)">🎧</div>
+                <div class="thumb" onclick="cambiarImagen(this)">📦</div>
+                <div class="thumb" onclick="cambiarImagen(this)">🔋</div>
+                <div class="thumb" onclick="cambiarImagen(this)">📱</div>
+            </div>
+        </div>
+
+        <div class="product-detail-info">
+            <div class="badge" id="product-badge">
+                <span class="dot"></span> STOCK DISPONIBLE
+            </div>
+            
+            <h1 id="product-title">Cargando...</h1>
+            <p class="product-subtitle" id="product-subtitle">El clásico que nunca falla.</p>
+            
+            <div class="product-price-large">
+                <span id="product-price">200</span> <small>Bs</small>
+            </div>
+            <p class="condition" id="product-condition">Excelente estado · Sin rayones</p>
+
+            <div class="detail-specs">
+                <h3>Especificaciones técnicas</h3>
+                <ul id="specs-list"></ul>
+            </div>
+
+            <div class="box-contents">
+                <h3>¿Qué incluye la caja?</h3>
+                <ul>
+                    <li>✅ Producto principal</li>
+                    <li>✅ Estuche / Caja original</li>
+                    <li>✅ Cable de carga</li>
+                    <li>✅ Manual de usuario</li>
+                </ul>
+            </div>
+
+            <div class="reviews-section">
+                <h3>Opiniones de clientes</h3>
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Increíble sonido, llegó al día siguiente en Cochabamba. 100% recomendado."</p>
+                    <span class="review-author">- Carlos M.</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p>"El pago por QR fue súper fácil y el producto está impecable."</p>
+                    <span class="review-author">- Andrea Q.</span>
+                </div>
+            </div>
+
+            <div class="detail-actions">
+                <button class="btn-reservar-final" id="btn-reservar-final" onclick="irAReservar()">
+                    Reservar este modelo →
+                </button>
+                <p class="secure-text">🔒 Pago seguro · Garantía 30 días</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-icon">🎧</span>
+                    <span class="logo-text">SawPods</span>
+                </div>
+                <p>Audio original al mejor precio en Cochabamba, Bolivia.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces</h4>
+                <a href="index.html">Inicio</a>
+                <a href="index.html#catalogo">Catálogo</a>
+                <a href="index.html#reservar">Reservar</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p>📱 <a href="https://wa.me/59176466625" target="_blank" style="color: inherit;">+591 76466625</a></p>
+                <p>📍 Cochabamba, Bolivia</p>
+                <p>🎵 <a href="https://www.tiktok.com/@saw_pods" target="_blank" style="color: var(--primary-blue);">TikTok: @saw_pods</a></p>
+                <p>📷 <a href="https://www.instagram.com/saw_pods" target="_blank" style="color: var(--primary-blue);">Instagram: @saw_pods</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 SawPods Bolivia. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        cargarDetalleProducto();
+    </script>
+</body>
+</html>
